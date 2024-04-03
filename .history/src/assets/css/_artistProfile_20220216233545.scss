@@ -1,0 +1,796 @@
+/* =============================
+    Artist Home Section
+============================= */
+.ArtistHomeDiv {
+  position: relative;
+  .ArtistHomeText {
+    position: relative;
+    height: 400px;
+    background: nth($color, 3);
+    padding-bottom: 30px;
+    @include Media(1366) {
+      height: 350px;
+    }
+    img {
+      @include Img(cover);
+    }
+  }
+}
+
+/* =============================
+    Artist Profile Section
+============================= */
+.ArtistProSec {
+  position: relative;
+  .ArtistInfoDiv {
+    margin-top: -180px;
+    position: relative;
+    margin-bottom: 50px;
+    .ArtistImgDiv {
+      width: 330px;
+      padding-bottom: 50px;
+      position: relative;
+      z-index: 10;
+      @include Media(1366) {
+        width: 300px;
+      }
+      @include Media(991) {
+        width: 280px;
+        padding-bottom: 40px;
+      }
+      @include Media(767) {
+        margin: 0 auto 30px;
+      }
+      .ImgDiv {
+        position: relative;
+        height: 400px;
+        padding: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        @include Media(1366) {
+          height: 350px;
+        }
+        @include Media(991) {
+          height: 330px;
+          padding: 15px;
+        }
+        img {
+          @include Img(cover);
+          border-radius: 20px;
+          // clip-path: polygon(9% 0, 100% 0, 91% 100%, 0% 100%);
+        }
+      }
+      .ReactText {
+        position: relative;
+        margin-top: 20px;
+        padding: 10px 0 10px 110px;
+        background: linear-gradient(to right, transparent 0%, transparent 30%, #e8b239 30%, #e8b239 60%);
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+        @include Media(991) {
+          padding: 10px 0 10px 95px;
+        }
+        p {
+          text-align: right;
+          margin-bottom: 0;
+          @include Font(1, 600, 1);
+        }
+      }
+
+      .icon1 li a i {
+        font-size: 1.2rem;
+        color: nth($color, 1);
+      }
+
+      .ReactLinkUl {
+        // position: absolute;
+        bottom: 0;
+        left: 0;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        li {
+          position: relative;
+          &:first-child {
+            a {
+              width: 80px;
+              height: 80px;
+              background: #25d366;
+              .icon {
+                font-size: 3rem;
+              }
+              @include Media(991) {
+                width: 70px;
+                height: 70px;
+              }
+            }
+          }
+        }
+        a {
+          @include Flex(center, center);
+          width: 40px;
+          height: 40px;
+          margin: 0 5px;
+          background: nth($color, 4);
+          @include BorRadius(50%);
+          &.disabled {
+            background: #839aa1;
+          }
+          > img{
+           background: #;
+          }
+          .icon {
+            font-size: 1.2rem;
+            color: nth($color, 1);
+          }
+          @include Media(991) {
+            width: 30px;
+            height: 30px;
+            .icon {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .ArtistTextDiv {
+      position: relative;
+      width: calc(100% - 345px);
+      @include Media(1366) {
+        width: calc(100% - 320px);
+      }
+      @include Media(991) {
+        padding-top: 100px;
+        width: calc(100% - 290px);
+      }
+      @include Media(767) {
+        padding: 0 0 50px 0;
+        width: 100%;
+      }
+      .EditIcon {
+        position: absolute;
+        top: 0;
+        right: 60px;
+        width: 50px;
+        height: 50px;
+        z-index: 99;
+        @include Media(991) {
+          top: 60px;
+        }
+        button {
+          @include Flex(center, center);
+          background: #e5e9e8;
+          @include BorRadius(50%);
+
+          border: 0;
+          .icon {
+            color: nth($color, 4);
+            font-size: 22px;
+          }
+        }
+      }
+      .DelIcon {
+        @extend .EditIcon;
+        right: 0;
+        .icon {
+          color: red !important;
+        }
+      }
+      .Title {
+        position: relative;
+        height: auto;
+        z-index: 9;
+        margin-bottom: 30px;
+        padding: 10px;
+        padding-left: 0;
+        @include Media(767) {
+          padding: 10px 10px 10px 50px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -120px;
+          width: 70%;
+          height: 100%;
+          z-index: -1;
+          background: nth($color, 4);
+          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+          @include Media(1199) {
+            width: 90%;
+          }
+          @include Media(991) {
+            width: 130%;
+          }
+          @include Media(767) {
+            width: 100%;
+            left: 0;
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+          }
+        }
+        h3 {
+          display: inline-block;
+          margin-bottom: 15px;
+          @include Font(2, 700, 3);
+          padding-bottom: 5px;
+          border-bottom: 1px solid #fff;
+          @include Media(991) {
+            font-size: 1.8rem;
+          }
+          @include Media(497) {
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          @include Font(1, 400, 3);
+          @include Media(497) {
+            font-size: 0.85rem;
+          }
+        }
+      }
+      .Description {
+        position: relative;
+        h5 {
+          padding-right: 5px;
+          @include Font(1.2, 700, 3);
+          border-right: 1px solid nth($color, 3);
+        }
+        h6 {
+          margin-left: 5px;
+          @include Font(1.2, 700, 4);
+        }
+        strong {
+          display: inline-block;
+          @include Font(1.5, 700, 4);
+          padding-bottom: 5px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid nth($color, 4);
+          @include Media(991) {
+            font-size: 0.85rem;
+          }
+        }
+        b {
+          display: block;
+          margin: 10px 0 5px;
+        }
+        p {
+          @include Font(1, 300, 3);
+        }
+      }
+      .ReactText {
+        position: relative;
+        margin-top: 20px;
+        padding: 10px 0 10px 90px;
+        background: linear-gradient(to right, transparent 0%, transparent 25%, #e8b239 25%, #e8b239 60%);
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+        @include Media(991) {
+          padding: 10px 0 10px 75px;
+        }
+        @include Media(767) {
+          margin-top: 30px;
+          padding: 10px 30px 10px 100px;
+          clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+          background: linear-gradient(to right, transparent 0%, transparent 17%, #e8b239 17%, #e8b239 60%);
+        }
+        @include Media(479) {
+          margin-top: 30px;
+          padding: 10px 30px 10px 100px;
+          clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+          background: linear-gradient(to right, transparent 0%, transparent 25%, #e8b239 25%, #e8b239 60%);
+        }
+        p {
+          text-align: right;
+          margin-bottom: 0;
+          @include Font(1, 600, 1);
+        }
+      }
+      .ReactLinkUl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        width: 200px;
+        li {
+          position: relative;
+          &:first-child {
+            a {
+              width: 80px;
+              height: 80px;
+              background: #25d366;
+              .icon {
+                font-size: 3rem;
+              }
+            }
+          }
+        }
+        a {
+          @include Flex(center, center);
+          width: 30px;
+          height: 30px;
+          margin: 0 5px;
+          background: nth($color, 4);
+          @include BorRadius(50%);
+          &.disabled {
+            background: nth($color, 3);
+          }
+
+          .icon {
+            color: nth($color, 1);
+          }
+        }
+      }
+    }
+  }
+  .ArtistPortDiv {
+    position: relative;
+    margin-bottom: 50px;
+    .TitlePort {
+      position: relative;
+      @include Media(767) {
+        width: 60%;
+      }
+      @include Media(575) {
+        width: 100%;
+      }
+    }
+    .ArtistVideo {
+      position: relative;
+      iframe {
+        width: 100%;
+        height: 350px;
+        @include Media(575) {
+          height: 250px;
+        }
+      }
+    }
+  }
+  .ScrollDiv {
+    overflow-y: scroll;
+    height: 350px;
+  }
+  .ArtistRec {
+    position: relative;
+    .RecoTitle {
+      position: relative;
+      .TitlePort {
+        width: 50%;
+        @include Media(767) {
+          width: 60%;
+        }
+        @include Media(575) {
+          width: 100%;
+        }
+      }
+      button {
+        @include Font(1, 400, 1);
+        padding: 5px 30px;
+        border: 0;
+        background: nth($color, 4);
+        @include BorRadius(10px);
+        @include Media(575) {
+          margin: 15px 0 0 auto;
+        }
+      }
+    }
+    .RecommendationOuterDiv {
+      position: relative;
+      padding: 30px 15px;
+      .RecommendationDiv {
+        position: relative;
+        align-items: flex-start;
+        padding: 15px 30px;
+        background: nth($color, 3);
+        border: 1px solid nth($color, 4);
+        @include Media(575) {
+          padding: 15px;
+        }
+        &:nth-child(even) {
+          background: nth($color, 1);
+          border: 0;
+          .ImgDiv::before {
+            background: nth($color, 1) !important;
+          }
+          p,
+          h5 {
+            color: nth($color, 3) !important;
+          }
+        }
+        .RecImgDiv {
+          width: 25%;
+          @include Media(575) {
+            width: 60%;
+            margin: 0 auto;
+          }
+          .ImgDiv {
+            position: relative;
+            padding: 20px;
+            height: 250px;
+            background: nth($color, 4);
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            @include Media(991) {
+              padding: 10px;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              top: 1%;
+              left: 1%;
+              width: 98%;
+              height: 98%;
+              z-index: -1;
+              background: nth($color, 3);
+              clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            }
+            img {
+              @include Img("cover");
+              clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            }
+            .sb-avatar {
+              @extend img;
+            }
+          }
+          .FooterDiv {
+            position: relative;
+            height: auto;
+            margin: -5px 0 0 -15px;
+            padding: 10px 30px;
+            text-align: center;
+            background: nth($color, 5);
+            clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+            p {
+              text-transform: uppercase;
+              @include Font(1, 400, 3);
+            }
+          }
+        }
+        .RecTextDiv {
+          width: 72%;
+          @include Media(575) {
+            width: 100%;
+            margin: 0 auto;
+          }
+          label {
+            @include Font(1, 400, 1);
+            margin-bottom: 5px;
+            @include Media(479) {
+              font-size: 0.85rem;
+            }
+          }
+          input {
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            background: transparent;
+            border: 1px solid nth($color, 4);
+            padding: 5px 15px;
+            @include Font(1, 400, 1);
+            @include BorRadius(5px);
+            @include Media(479) {
+              font-size: 0.85rem;
+            }
+          }
+          .pressing {
+            position: relative;
+            margin: 15px 0;
+            span {
+              @include Flex(center, center);
+              display: flex !important;
+              width: 30px;
+              // height: 30px;
+              background: nth($color, 5);
+              clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+              &:hover {
+                color: nth($color, 4) !important;
+              }
+            }
+          }
+          h4 {
+            width: 100%;
+            margin: 15px;
+            @include Font(1.2, 700, 1);
+            @include Media(991) {
+              font-size: 1rem;
+            }
+          }
+          h5 {
+            margin: 15px;
+            @include Font(1.2, 700, 1);
+            @include Media(991) {
+              font-size: 1rem;
+            }
+            @include Media(575) {
+              width: 100%;
+              margin: 10px 0;
+            }
+          }
+          p {
+            width: 100%;
+            line-height: 24px;
+            @include Font(1, 400, 4);
+            @include Media(991) {
+              line-height: 18px;
+              font-size: 0.75rem;
+            }
+          }
+          span {
+            @include Font(1, 400, 4);
+          }
+          textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid nth($color, 4);
+            resize: none;
+            @include Font(1, 400, 4);
+          }
+          button {
+            display: block;
+            margin: 15px 0 15px auto;
+            padding: 8px 50px;
+            border: 0;
+            background: nth($color, 4);
+            @include Font(1, 400, 1);
+            @include BorRadius(10px);
+          }
+        }
+        .FileInput {
+          position: relative;
+          z-index: 99;
+          padding: 15px;
+          height: 300px;
+          background: nth($color, 5);
+          cursor: pointer;
+          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+          @include Media(575) {
+            height: 200px;
+          }
+          input {
+            @include Flex(center, center);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: 99;
+            opacity: 0;
+            cursor: pointer;
+          }
+          .Overlay {
+            height: 100%;
+            .icon {
+              font-size: 2rem;
+              color: nth($color, 4);
+            }
+          }
+        }
+      }
+      .PaginationUl {
+        position: relative;
+        margin: 50px 0;
+        border-top: 1px solid nth($color, 4);
+        padding-top: 30px;
+        a {
+          @include Flex(center, center);
+          width: 40px;
+          height: 40px;
+          background: nth($color, 4);
+          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+          .icon {
+            font-size: 1.5rem;
+            color: nth($color, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.DelModalModal {
+  .modal-header {
+    padding: 15px 15px 10px !important;
+    border-color: nth($color, 4);
+    h5 {
+      margin-bottom: 0;
+      @include Font(1.5, 400, 4);
+    }
+  }
+  .DelModalText {
+    position: relative;
+    padding: 15px;
+    p {
+      margin-bottom: 15px;
+      @include Font(1, 400, 3);
+    }
+    button {
+      text-transform: uppercase;
+      @include Font(1, 400, 4);
+      padding: 10px 45px;
+      border: 1px solid nth($color, 4);
+      margin: 5px;
+      &:hover {
+        color: nth($color, 1);
+        background: nth($color, 4);
+      }
+      &.DelBtn {
+        color: nth($color, 1);
+        background: #f5364a;
+        border: 1px solid #f5364a;
+      }
+    }
+  }
+}
+
+.ScrollLeadsDiv {
+  overflow-y: scroll;
+  height: 350px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.EditProfileModal {
+  .modal-header {
+    position: relative;
+    @include Media(575) {
+      padding: 0.5rem 1rem;
+    }
+    .modal-title {
+      text-transform: capitalize;
+      @include Font(1.5, 700, 4);
+      @include Media(575) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .ProfileImgDiv {
+    position: relative;
+    height: auto;
+    z-index: 10;
+    margin: 0 auto 30px;
+    .ImgDiv {
+      position: relative;
+      margin: 0 auto;
+      float: none;
+      width: 300px;
+      height: 300px;
+      padding: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @include Media(479) {
+        width: auto;
+        height: 200px;
+      }
+      img {
+        text-align: center;
+        width: auto;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
+      }
+      .EditBtn {
+        @include Flex(center, center);
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        z-index: 99;
+        background: #e5e9e8;
+        @include BorRadius(50%);
+        border: 0;
+        .icon {
+          color: nth($color, 4);
+          font-size: 20px;
+        }
+      }
+    }
+    .ImgCoverDiv {
+      position: relative;
+      margin: 0 auto;
+      float: none;
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      img {
+        @include Img("cover");
+      }
+      .EditBtn {
+        @include Flex(center, center);
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        width: 40px;
+        height: 40px;
+        z-index: 99;
+        background: #e5e9e8;
+        @include BorRadius(50%);
+        border: 0;
+        .icon {
+          color: nth($color, 4);
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .FormDiv {
+    position: relative;
+    height: auto;
+    label {
+      text-transform: capitalize;
+      @include Font(1, 400, 4);
+    }
+    input {
+      width: 100%;
+      padding: 5px 15px;
+      background: transparent;
+      border: 1px solid nth($color, 3);
+      @include BorRadius(10px);
+      @include Font(0.9, 400, 3);
+      &::placeholder {
+        color: nth($color, 3);
+      }
+    }
+    textarea {
+      height: 100px;
+      @extend input;
+    }
+    select {
+      @extend input;
+    }
+  }
+  .FormSub {
+    text-transform: capitalize;
+    border: 0;
+    padding: 5px 30px;
+    @include BorRadius(5px);
+    @include Font(1, 400, 1);
+    background: nth($color, 4);
+  }
+}
+
+.ReactGridGallery_tile-icon-bar {
+  display: none;
+}
+
+.ReactGridGallery_tile {
+  width: 30%;
+}
+
+.image_1swebtw-o_O-imageLoaded_zgbg08 {
+  width: 500px;
+  @include Media(575) {
+    width: auto;
+  }
+}
+
+.EditProfileModal {
+  height: 100vh;
+  margin: auto;
+  overflow-y: scroll;
+  padding: 0 15px;
+  @include Media(575) {
+    padding: 0 5px;
+  }
+}

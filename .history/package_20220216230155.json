@@ -1,0 +1,216 @@
+{
+  {
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@date-io/date-fns": "^1.3.13",
+      "@fortawesome/fontawesome-svg-core": "^1.2.32",
+      "@fortawesome/free-solid-svg-icons": "^5.15.1",
+      "@fortawesome/react-fontawesome": "^0.1.13",
+      "@material-ui/core": "^4.11.2",
+      "@material-ui/icons": "^4.11.2",
+      "@material-ui/pickers": "^3.3.10",
+      "@syncfusion/ej2-react-calendars": "^19.2.62",
+      "@testing-library/jest-dom": "^5.11.6",
+      "@testing-library/react": "^11.2.2",
+      "@testing-library/user-event": "^12.5.0",
+      "@tinymce/tinymce-react": "^3.13.0",
+      "antd": "^4.16.13",
+      "antd-img-crop": "^3.16.0",
+      "axios": "^0.21.0",
+      "date-fns": "^2.16.1",
+      "draft-js": "^0.11.7",
+      "draftjs-to-html": "^0.9.1",
+      "get-youtube-id": "^1.0.1",
+      "jquery": "^3.5.1",
+      "jquery-ui": "^1.12.1",
+      "node-sass": "^4.14.1",
+      "owlcarousel": "^1.3.3",
+      "react": "^17.0.1",
+      "react-avatar": "^3.9.7",
+      "react-bootstrap": "^1.4.0",
+      "react-bootstrap-country-select": "^1.0.0",
+      "react-bootstrap-month-selector": "^0.2.0",
+      "react-custom-flag-select": "^2.5.0",
+      "react-dom": "^17.0.1",
+      "react-draft-wysiwyg": "^1.14.7",
+      "react-facebook-login": "^4.1.1",
+      "react-flags-select": "^1.1.13",
+      "react-google-login": "^5.2.2",
+      "react-grid-gallery": "^0.5.5",
+      "react-image-crop": "^8.6.6",
+      "react-input-files": "^1.2.0",
+      "react-js-pagination": "^3.0.3",
+      "react-multiple-image-uploader": "^1.0.3",
+      "react-notifications": "^1.7.2",
+      "react-owl-carousel": "^2.3.1",
+      "react-phone-number-input": "^3.1.8",
+      "react-player": "^2.9.0",
+      "react-rating-stars-component": "^2.2.0",
+      "react-router-dom": "^5.2.0",
+      "react-scripts": "4.0.1",
+      "react-show-more-text": "^1.4.6",
+      "react-table": "^7.6.3",
+      "react-whatsapp": "^0.2.0",
+      "react-youtube": "^7.13.0",
+      "reactstrap": "^8.9.0",
+      "video-react": "^0.14.1",
+      "web-vitals": "^0.2.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {}
+  }
+   HEAD
+  "name": "sna",
+  "version": "1.0.0",
+  "description": "SNA project in MERN Stack with MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "SNA",
+    "MERN",
+    "React",
+    "JS",
+    "Node",
+    "JS",
+    "Express",
+    "JS",
+    "MySQL"
+  ],
+  "author": "M_IRFAN_ALI",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "config": "^3.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "joi": "^17.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.4.17",
+    "react-player": "^2.7.2",
+    "react-show-more-text": "^1.4.6",
+    "telr-nodejs": "^1.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+=======
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@date-io/date-fns": "^1.3.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/pickers": "^3.3.10",
+    "@syncfusion/ej2-react-calendars": "^19.2.62",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "@tinymce/tinymce-react": "^3.13.0",
+    "antd": "^4.16.13",
+    "antd-img-crop": "^3.16.0",
+    "axios": "^0.21.0",
+    "date-fns": "^2.16.1",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "get-youtube-id": "^1.0.1",
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "node-sass": "^4.14.1",
+    "owlcarousel": "^1.3.3",
+    "react": "^17.0.1",
+    "react-avatar": "^3.9.7",
+    "react-bootstrap": "^1.4.0",
+    "react-bootstrap-country-select": "^1.0.0",
+    "react-bootstrap-month-selector": "^0.2.0",
+    "react-custom-flag-select": "^2.5.0",
+    "react-dom": "^17.0.1",
+    "react-draft-wysiwyg": "^1.14.7",
+    "react-facebook-login": "^4.1.1",
+    "react-flags-select": "^1.1.13",
+    "react-google-login": "^5.2.2",
+    "react-grid-gallery": "^0.5.5",
+    "react-image-crop": "^8.6.6",
+    "react-input-files": "^1.2.0",
+    "react-js-pagination": "^3.0.3",
+    "react-multiple-image-uploader": "^1.0.3",
+    "react-notifications": "^1.7.2",
+    "react-owl-carousel": "^2.3.1",
+    "react-phone-number-input": "^3.1.8",
+    "react-player": "^2.9.0",
+    "react-rating-stars-component": "^2.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-show-more-text": "^1.4.6",
+    "react-table": "^7.6.3",
+    "react-whatsapp": "^0.2.0",
+    "react-youtube": "^7.13.0",
+    "reactstrap": "^8.9.0",
+    "video-react": "^0.14.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
+>>>>>>> 1613ac44c780abe4c3684a56d89daaf66872e0a2
+}

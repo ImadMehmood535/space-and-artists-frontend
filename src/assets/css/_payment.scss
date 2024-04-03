@@ -1,0 +1,196 @@
+.Paymentsection {
+  position: relative;
+  background: nth($color, 3);
+  padding: 50px 0;
+  .PaymentArea {
+    position: relative;
+  }
+
+  .StepperTitle {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    @include Media(575) {
+      padding-bottom: 20px;
+    }
+    &.PaymentTitle {
+      h2 {
+        font-size: 3.5rem;
+        @include Media(575) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    h2 {
+      @include Font(4, 900, 4);
+      @include Media(575) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .Title {
+    border-bottom: 1px solid nth($color, 4);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    @include Media(575) {
+      padding-bottom: 20px;
+    }
+
+    &.PaymentTitle {
+      h2 {
+        font-size: 2.5rem;
+        @include Media(575) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    h2 {
+      @include Font(4, 900, 4);
+      @include Media(575) {
+        font-size: 1.8rem;
+      }
+    }
+    &.TextDiv {
+      position: relative;
+      h4 {
+        margin-bottom: 25px;
+        @include Font(1.5, 700, 4);
+        @include Media(575) {
+          font-size: 1.2rem;
+        }
+      }
+      p {
+        margin-bottom: 20px;
+        line-height: 22px;
+        @include Font(1, 400, 1);
+        @include Media(575) {
+          font-size: 0.85rem;
+        }
+        span {
+          font-weight: 700;
+          color: nth($color, 4);
+        }
+      }
+    }
+  }
+}
+
+.ArtistProfileBtnDiv {
+  position: relative;
+  .ArtistProfileBtn {
+    display: block;
+    padding: 10px 40px 10px 100px;
+    @include Font(1, 400, 1);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+}
+
+.BottomStepperHeading {
+  h2 {
+    @include Font(2.8, 900, 1);
+    @include Media(1366) {
+      font-size: 2rem;
+    }
+    @include Media(991) {
+      font-size: 1.7rem;
+    }
+    @include Media(575) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.ClientArtistBottomStepperHeading {
+  h2 {
+    margin-bottom: 4px;
+    @include Media(1366) {
+      font-size: 2rem;
+    }
+    @include Media(991) {
+      font-size: 1.3rem;
+    }
+    @include Media(767) {
+      font-size: 1.2rem;
+    }
+    @include Media(575) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.PriceContainer {
+  div {
+    @include Media(1366) {
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    @include Media(991) {
+      padding-left: 4px;
+      padding-right: 4px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+    @include Media(767) {
+      padding-left: 1px;
+      padding-right: 1px;
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    @include Media(575) {
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+}
+
+.BottomContainer {
+  @include Media(1366) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include Media(991) {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
+.PriceContain {
+  @include Media(1366) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  @include Media(991) {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  @include Media(767) {
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  @include Media(575) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.Step {
+  text-align: center;
+  background-color: var(--main);
+  font-size: 3rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

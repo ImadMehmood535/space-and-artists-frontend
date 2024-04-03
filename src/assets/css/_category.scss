@@ -1,0 +1,35 @@
+/* =============================
+    Category Section
+============================= */
+.CategoryForm {
+  position: relative;
+  input {
+    width: 100%;
+  }
+  .SubmitBtn {
+    border: 0;
+    padding: 10px 50px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    background: nth($color, 4);
+    @include Font(1, 300, 1);
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    @include Media(575) {
+      padding: 8px 30px;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.MuiInput-underline,
+.MuiFormControl-root {
+  width: 100%;
+  margin: 10px 0 !important;
+}
+
+.CountryForm {
+  width: 500px;
+  @include Media(575) {
+    width: 100%;
+  }
+}

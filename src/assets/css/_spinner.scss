@@ -1,0 +1,87 @@
+.loadingSpinnerDiv {
+  position: relative;
+  justify-content: center;
+  min-height: 500px;
+  height: 100%;
+  background: nth($color, 3);
+  .loadingSpinner {
+    pointer-events: none;
+    width: 2.5em;
+    height: 2.5em;
+    border: 0.4em solid transparent;
+    border-color: #eee;
+    border-top-color: nth($color, 4);
+    border-radius: 50%;
+    animation: loadingSpin 1s linear infinite;
+    -webkit-animation: loadingSpin 1s linear infinite;
+  }
+}
+
+@keyframes loadingSpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  begin cubes css */
+
+.cubes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+  min-height: 500px;
+  @include Flex(center, center);
+  .InnerCube {
+    width: 100px;
+    height: 100px;
+    .sk-cube {
+      width: 33%;
+      height: 33%;
+      background-color: nth($color, 4);
+      float: left;
+      animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    }
+    .sk-cube1 {
+      animation-delay: 0.2s;
+    }
+    .sk-cube2 {
+      animation-delay: 0.3s;
+    }
+    .sk-cube3 {
+      animation-delay: 0.4s;
+    }
+    .sk-cube4 {
+      animation-delay: 0.1s;
+    }
+    .sk-cube5 {
+      animation-delay: 0.2s;
+    }
+    .sk-cube6 {
+      animation-delay: 0.3s;
+    }
+    .sk-cube7 {
+      animation-delay: 0s;
+    }
+    .sk-cube8 {
+      animation-delay: 0.1s;
+    }
+    .sk-cube9 {
+      animation-delay: 0.2s;
+    }
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
+}

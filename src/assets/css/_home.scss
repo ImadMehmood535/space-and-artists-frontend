@@ -1,0 +1,1072 @@
+/* =============================
+        Header Section
+============================= */
+header {
+  position: relative;
+  background: nth($color, 5);
+  padding: 0px 250px 0px 50px;
+  @include Media(1366) {
+    padding: 0px 100px 0px 50px;
+  }
+  @include Media(991) {
+    padding: 0px 30px;
+    background: nth($color, 3);
+  }
+  @include Media(767) {
+    padding: 0px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 101%;
+    clip-path: polygon(0 0, 100% 0%, 65% 100%, 0% 100%);
+    background: nth($color, 3);
+    @include Media(1366) {
+      width: 22%;
+    }
+    @include Media(991) {
+      display: none;
+    }
+  }
+  .navbar-light .navbar-toggler {
+    background: nth($color, 4);
+    border: 0;
+    @include BorRadius(0);
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+  }
+  .navbar-expand-md {
+    @include Media(991) {
+      border-bottom: 1px solid nth($color, 4);
+    }
+    @include Media(575) {
+      padding: 15px 0;
+    }
+  }
+  .navbar-toggler {
+    border: 1px solid nth($color, 1);
+    border-color: nth($color, 1) !important;
+  }
+  .navbar-brand {
+    width: 90px;
+    @include Media(767) {
+      width: 130px;
+    }
+  }
+  .nav-link {
+    position: relative;
+    text-transform: uppercase;
+    font-style: italic;
+    @include FontRal(1.2, 600, 3);
+    color: nth($color, 3) !important;
+    padding: 5px 15px !important;
+    @include Tran(0.4s, ease);
+    &:hover {
+      font-weight: 700;
+    }
+    @include Media(991) {
+      color: nth($color, 1) !important;
+    }
+    @include Media(767) {
+      text-align: center;
+      font-size: 1rem;
+      margin: 5px 0;
+      &::before {
+        display: none;
+      }
+    }
+    &::after {
+      display: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: nth($color, 4);
+      transform: rotate(30deg);
+    }
+    &.NoBefore::before {
+      display: none;
+    }
+  }
+  .navbar-nav {
+    margin-right: 50px;
+    @include Media(767) {
+      border-top: 1px solid nth($color, 4);
+      margin: 10px 0 0 0;
+      padding: 30px 0;
+    }
+  }
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+    top: 58px;
+    min-width: 450px;
+    padding: 15px 15px 50px;
+    border-radius: 0;
+    clip-path: polygon(100% 0, 100% 99%, 0 94%, 0 0);
+    @include Media(575) {
+      min-width: 100%;
+      top: 100%;
+      padding: 15px 10px 30px;
+      clip-path: polygon(100% 0, 100% 99%, 0 98%, 0 0);
+    }
+    &.MinWidthCountry {
+      min-width: 300px;
+      h3 {
+        @include Font(2, 900, 4);
+        margin-bottom: 10px;
+      }
+    }
+    &.Account {
+      min-width: 10rem;
+      background-color: nth($color, 3);
+      padding: 0;
+      clip-path: none;
+      border: 1px solid nth($color, 1);
+      float: left;
+      width: 100%;
+      a {
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 2px;
+        @include Font(0.85, 400, 1);
+        background: transparent;
+        border-bottom: 1px solid nth($color, 1);
+        &:hover {
+          color: nth($color, 1);
+          background: nth($color, 4);
+        }
+      }
+    }
+    .PosInputDiv {
+      position: relative;
+      .PosIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        padding: 0 !important;
+        background: transparent !important;
+        .icon {
+          color: nth($color, 3);
+        }
+      }
+    }
+    .DevnDropDown {
+      position: relative;
+      @include Media(767) {
+        float: none;
+      }
+      .Title {
+        position: relative;
+        margin-bottom: 15px;
+        h4 {
+          margin-right: 15px;
+          @include Font(3.2, 700, 4);
+          @include Media(575) {
+            font-size: 2rem;
+          }
+        }
+        img {
+          width: 30px;
+        }
+      }
+      p {
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+        @include FontRal(0.85, 400, 3);
+        a {
+          color: nth($color, 4);
+        }
+      }
+      .form {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 8px 10px;
+          border: 1px solid nth($color, 4);
+          @include BorRadius(5px);
+          @include Font(0.85, 400, 3);
+          &::placeholder {
+            color: nth($color, 3);
+          }
+        }
+        .Desc {
+          position: relative;
+          a {
+            @include Font(0.85, 400, 3);
+            @include Media(575) {
+              font-size: 0.75rem;
+            }
+          }
+          .Remember {
+            width: auto;
+            input {
+              width: auto;
+              margin-right: 10px;
+            }
+            label {
+              @include Font(0.85, 400, 3);
+              cursor: pointer;
+              @include Media(575) {
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+        button {
+          display: block;
+          margin: 0 auto;
+          border: 0;
+          padding: 10px 50px;
+          text-transform: uppercase;
+          background: nth($color, 4);
+          @include Font(1, 300, 1);
+          clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+          @include Media(575) {
+            font-size: 0.75rem;
+            padding: 5px 40px;
+          }
+        }
+      }
+      .LogAnother {
+        position: relative;
+        @include Media(767) {
+          float: none;
+        }
+        p {
+          position: relative;
+          text-align: center;
+          @include FontRal(1, 400, 3);
+          @include Media(575) {
+            font-size: 0.75rem;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 32%;
+            height: 1px;
+            background: nth($color, 4);
+            @include Media(575) {
+              width: 25%;
+            }
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 32%;
+            height: 1px;
+            background: nth($color, 4);
+            @include Media(575) {
+              width: 25%;
+            }
+          }
+        }
+        .LogUl {
+          position: relative;
+          img {
+            display: block;
+            width: 50px;
+            margin: 0 10px;
+            @include Media(575) {
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
+    .HoverCountry {
+      position: relative;
+      @include Font(1, 400, 3);
+      padding: 10px 0;
+      &:hover {
+        color: nth($color, 4);
+      }
+    }
+    .SearchDrop {
+      position: relative;
+      @include Media(767) {
+        float: none;
+      }
+      .BackBtn {
+        border: 0;
+        padding: 5px 30px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        background: nth($color, 4);
+        @include Font(0.85, 300, 1);
+        clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+      }
+      .Title {
+        position: relative;
+        margin-bottom: 30px;
+        h4 {
+          position: relative;
+          text-align: center;
+          @include FontRal(1.5, 800, 4);
+          @include Media(575) {
+            font-size: 1.2rem;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 20%;
+            height: 1px;
+            background: nth($color, 4);
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 20%;
+            height: 1px;
+            background: nth($color, 4);
+          }
+        }
+      }
+      .Body {
+        position: relative;
+        @include Media(767) {
+          float: none;
+        }
+        h6 {
+          margin-bottom: 10px;
+          @include FontRal(1, 800, 3);
+          text-transform: uppercase;
+          .icon {
+            font-size: 0.85rem;
+            margin: 0 5px;
+          }
+        }
+        form {
+          position: relative;
+          margin-bottom: 30px;
+          background: nth($color, 5);
+          clip-path: polygon(5% 0, 100% 0%, 97% 100%, 0% 100%);
+          input {
+            border: 0;
+            padding: 5px 30px;
+            text-transform: uppercase;
+            background: nth($color, 5);
+            @include Font(0.85, 300, 3);
+            clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+            @include Media(575) {
+              width: calc(100% - 50px);
+              clip-path: none;
+            }
+          }
+          button {
+            border: 0;
+            padding: 5px 15px;
+            text-transform: uppercase;
+            background: nth($color, 4);
+            @include Font(1, 300, 1);
+            clip-path: polygon(25% 0, 100% 0%, 85% 100%, 0% 100%);
+          }
+        }
+        .SearchUl {
+          position: relative;
+          li {
+            width: 50%;
+            padding: 0 10px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            @include Media(575) {
+              width: 100%;
+            }
+            a {
+              @include FontRal(0.85, 400, 3);
+              &:hover {
+                color: nth($color, 4);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .CountryDrop {
+    margin-left: 15px;
+    position: relative;
+    @include Media(991) {
+      margin: 0 auto;
+    }
+    a {
+      display: block;
+      margin-bottom: 5px;
+    }
+    img {
+      width: 30px;
+      height: auto;
+    }
+  }
+}
+
+.dropdown-toggle::after {
+  border-top: 0.3em solid nth($color, 4);
+}
+
+.BB {
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: -ms-fit-content;
+  width: -o-fit-content;
+  padding-bottom: 10px;
+  border-bottom: 1px solid nth($color, 4);
+}
+
+/* =============================
+        Home Section
+============================= */
+.HomeSec {
+  position: relative;
+  background: nth($color, 3);
+  .HomeCarousel {
+    position: relative;
+    height: 500px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 70%);
+    @include Media(575) {
+      height: 400px;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+    }
+    @include Media(479) {
+      height: 400px;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    }
+    .carousel-inner {
+      height: 100%;
+    }
+    .carousel-item {
+      height: 100%;
+      position: relative;
+      img {
+        @include Img(cover);
+      }
+    }
+    .carousel-caption {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(44, 44, 44, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0 15%;
+      @include Media(991) {
+        padding: 0 5%;
+        align-items: center;
+      }
+      @include Media(575) {
+        padding: 0 10%;
+      }
+      h5 {
+        text-align: right;
+        margin-bottom: 30px;
+        @include Font(2.5, 900, 4);
+        line-height: 40px;
+        @include Media(1366) {
+          font-size: 2rem;
+        }
+        @include Media(575) {
+          font-size: 1.8rem;
+          line-height: 36px;
+          text-align: center;
+          margin-bottom: 15px;
+          letter-spacing: 2px;
+        }
+      }
+      a {
+        border: 0;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        background: nth($color, 4);
+        @include Font(1, 300, 1);
+        clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+        @include Media(575) {
+          font-size: 0.85rem;
+          padding: 5px 30px;
+          margin: 0 auto;
+        }
+      }
+    }
+    .carousel-indicators {
+      width: auto;
+      height: 100%;
+      flex-direction: column;
+      left: 0;
+      right: auto;
+      @include Media(991) {
+        margin: 0 5%;
+      }
+      @include Media(575) {
+        bottom: 0;
+        top: 85%;
+        flex-direction: row;
+        right: 0;
+        left: 60%;
+      }
+      li {
+        width: 10px;
+        height: 10px;
+        margin: 5px 0;
+        padding: 0;
+        border: 0;
+        opacity: 1;
+        background: nth($color, 4);
+        @include BorRadius(50%);
+        &.active {
+          background: nth($color, 1);
+        }
+        @include Media(575) {
+          margin: 5px 2px;
+        }
+      }
+    }
+  }
+}
+
+/* =============================
+        Feature Artist
+============================= */
+.FeatureArtSec {
+  position: relative;
+  padding: 30px 0 50px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background: nth($color, 3);
+    clip-path: polygon(100% 0, 100% 100%, 50% 98%, 0 100%, 0 0);
+    @include Media(479) {
+      top: -1px;
+      clip-path: polygon(100% 0, 100% 100%, 50% 99%, 0 100%, 0 0);
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.2%;
+    background: nth($color, 4);
+    clip-path: polygon(100% 0, 100% 100%, 50% 98%, 0 100%, 0 0);
+    @include Media(479) {
+      clip-path: polygon(100% 0, 100% 100%, 50% 99%, 0 100%, 0 0);
+    }
+    z-index: -1;
+  }
+  .Title {
+    margin-top: -110px;
+    margin-left: 5%;
+    @include Media(1366) {
+      margin-top: -100px;
+    }
+    @include Media(1279) {
+      margin-top: -70px;
+    }
+    @include Media(575) {
+      margin-top: -30px;
+      margin-left: 0;
+    }
+  }
+  .FloatCarousel {
+    position: relative;
+    margin-bottom: 30px;
+    .item {
+      position: relative;
+      width: 100%;
+      padding: 20px 0;
+    }
+    .ArtistDiv {
+      position: relative;
+      padding: 0 20px;
+      .Art {
+        position: absolute;
+        top: -5%;
+        left: 10%;
+        z-index: 999;
+        display: inline-block;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        background: nth($color, 4);
+        clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+        p {
+          @include Font(1, 700, 1);
+        }
+      }
+      .ArtistHeader {
+        position: relative;
+        padding: 10px;
+        z-index: 99;
+        // background: #fff;
+        // clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   top: 1%;
+        //   left: 1%;
+        //   width: 98%;
+        //   height: 98%;
+        //   background: nth($color, 3);
+        //   z-index: -1;
+        //   clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+        // }
+        .ArtistImg {
+          position: relative;
+          img {
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            // clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+          }
+          .sb-avatar {
+            @extend img;
+          }
+        }
+      }
+      .ArtistFooter {
+        // position: absolute;
+        // bottom: -5%;
+        // left: -10%;
+        // width: 100%;
+        // height: auto;
+        // z-index: 999;
+        // padding: 10px 50px;
+        // text-transform: uppercase;
+        // background: nth($color, 1);
+        // @include Font(1, 300, 1);
+        // clip-path: polygon(12% 0, 100% 0%, 88% 100%, 0% 100%);
+        // text-align: center;
+        position: absolute;
+       bottom: -9%;
+    /* left: -10%; */
+      width: 100%;
+       height: auto;
+        z-index: 999;
+        padding: 10px 0px;
+        text-transform: uppercase;
+      background: #faad14;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ffffff;
+    /* -webkit-clip-path: polygon(12% 0, 100% 0%, 88% 100%, 0% 100%); */
+    /* clip-path: polygon(12% 0, 100% 0%, 88% 100%, 0% 100%); */
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+        p {
+          text-transform: uppercase;
+          text-align: center;
+          // @include Font(1, 900, 4);
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+/* =============================
+        How It Work
+============================= */
+.HowWorkSec {
+  position: relative;
+  padding: 10px 0 30px;
+  @include Media(575) {
+    padding: 10px 0;
+  }
+  .HowWorkOuterDiv {
+    position: relative;
+    .Title {
+      h2 {
+        margin-bottom: 10px;
+        color: nth($color, 3);
+      }
+      p {
+        @include Font(1, 600, 4);
+        @include Media(497) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+    .WorkExpDiv {
+      padding: 30px 0;
+      @include Media(1366) {
+        padding: 30px 60px;
+      }
+      @include Media(575) {
+        padding: 0;
+      }
+      .HowWorkDiv {
+        position: relative;
+        img {
+          display: block;
+          width: auto;
+          height: 230px;
+          @include Media(1366) {
+            height: 200px;
+          }
+          @include Media(800) {
+            height: auto;
+          }
+          @include Media(575) {
+            width: 50%;
+            height: auto;
+            margin: 0 auto 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =============================
+        What Looking For
+============================= */
+.LookingSec {
+  position: relative;
+  padding: 50px 0;
+  background: nth($color, 4);
+  clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+  @include Media(575) {
+    padding: 30px 0;
+    clip-path: polygon(100% 0, 100% 98%, 50% 100%, 0 98%, 0 0);
+  }
+  .BackBtn {
+    display: block;
+    border: 0;
+    padding: 5px 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background: nth($color, 4);
+    @include Font(0.85, 300, 1);
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    background: nth($color, 3);
+    clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+    @include Media(575) {
+      clip-path: polygon(100% 0, 100% 98%, 50% 100%, 0 98%, 0 0);
+    }
+  }
+  .Title {
+    position: relative;
+    float: none;
+    h2 {
+      color: nth($color, 1);
+      @include Media(575) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .LookingUl {
+    position: relative;
+    li {
+      width: 25%;
+      padding: 0 15px;
+      margin-bottom: 15px;
+      @include Media(991) {
+        width: 50%;
+      }
+      @include Media(575) {
+        width: 100%;
+      }
+      a {
+        display: block;
+        position: relative;
+        text-align: center;
+        padding: 10px 40px 10px 15px;
+        background: nth($color, 5);
+        span {
+          display: block;
+          margin: 0;
+          overflow: hidden;
+          text-transform: uppercase;
+          @include Font(1, 600, 4);
+          @include Media(575) {
+            padding: 5px 40px 5px 15px;
+            font-size: 0.85rem;
+          }
+        }
+        &::before {
+          content: '>';
+          position: absolute;
+          top: -1px;
+          right: -1%;
+          width: 40px;
+          height: 104%;
+          background: nth($color, 3);
+          padding: 10px 20px;
+          color: nth($color, 1);
+          clip-path: polygon(55% 0, 100% 0, 100% 100%, 0% 100%);
+          @include Media(575) {
+            height: 108%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* =============================
+        Blog Section
+============================= */
+.HomeBlogSec {
+  position: relative;
+  padding: 30px 0 0;
+  .HomeBlogOuterDiv {
+    position: relative;
+    .Title {
+      position: relative;
+      h2 {
+        color: nth($color, 3);
+      }
+    }
+    .SlickCarousel {
+      position: relative;
+      padding: 30px 0;
+      @include Media(575) {
+        padding: 0;
+      }
+      .slick-slide.slick-active {
+        outline: none;
+        &:focus {
+          outline: none;
+        }
+      }
+      .ArrowBtn {
+        background: nth($color, 4);
+        border: 0;
+        padding: 10px 15px;
+        cursor: pointer;
+        position: absolute;
+        top: -15%;
+        right: 50px;
+        &.slick-next {
+          right: 0px;
+        }
+        .icon {
+          font-size: 1.2rem;
+          color: nth($color, 1);
+        }
+        @include Media(575) {
+          padding: 5px 10px;
+          right: 40px;
+        }
+      }
+      .item {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        text-align: left;
+        line-height: normal;
+        background: transparent;
+        .HomeBlogDiv {
+          position: relative;
+          padding: 0 15px;
+          h5 {
+            margin-bottom: 15px;
+            @include Font(1.2, 600, 3);
+            @include Media(575) {
+              font-size: 1rem;
+            }
+          }
+          .BlogImg {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            margin-bottom: 15px;
+            @include BorRadius(25px);
+            @include Media(575) {
+              height: 250px;
+            }
+            .Overlay {
+              display: none;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(255, 255, 255, 0.5);
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .BlogFooter {
+            position: relative;
+            background: nth($color, 4);
+            padding: 10px;
+            @include BorRadius(10px);
+            overflow: hidden;
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 45%;
+              height: 100%;
+              z-index: 0;
+              background: nth($color, 3);
+              clip-path: polygon(100% 0, 100% 100%, 0 100%, 25% 0);
+            }
+            .BlogText {
+              position: relative;
+              small {
+                @include Font(0.85, 300, 3);
+                @include Media(575) {
+                  font-size: 0.65rem;
+                }
+              }
+              p {
+                margin-bottom: 0;
+                text-transform: initial;
+                @include Font(0.85, 400, 1);
+                @include Media(575) {
+                  font-size: 0.75rem;
+                }
+              }
+            }
+            p {
+              z-index: 99;
+              margin-bottom: 0;
+              text-transform: uppercase;
+              @include Font(1, 300, 1);
+              @include Media(575) {
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.flag-select__option__icon {
+  display: none;
+}
+
+.flag-select__btn {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 0 !important;
+  color: nth($color, 1) !important;
+  .flag-select__option {
+    margin: 0 !important;
+  }
+}
+
+.flag-select__btn:after,
+.flag-select__btn:before {
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  z-index: 999;
+  top: 15px;
+  right: 15px;
+}
+
+.flag-select__options {
+  width: 80%;
+  background: nth($color, 3) !important;
+  .flag-select__option {
+    &:hover {
+      span {
+        color: nth($color, 3) !important;
+      }
+    }
+  }
+}
+
+.NotFound {
+  min-height: 400px;
+  background: nth($color, 3);
+  h3 {
+    @include Font(4, 900, 1);
+    @include Media(575) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.BGProfile {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 250px;
+  clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+}
+
+.Rating {
+  position: relative;
+  small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 99;
+  }
+}
+
+.MuiIconButton-colorSecondary:hover {
+  background-color: transparent !important;
+}
+
+.dropdown-item:active {
+  background: transparent;
+}
+
+.CPasswordDiv {
+  height: auto;
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    .icon {
+      color: nth($color, 3);
+    }
+  }
+}

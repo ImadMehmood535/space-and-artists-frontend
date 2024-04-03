@@ -1,0 +1,29 @@
+:root {
+  --main: #e8b239;
+}
+.button-default {
+  color: white;
+  background-color: var(--main);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.button-slanted {
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.button-slanted-content {
+  -ms-transform: skewX(20deg);
+  -webkit-transform: skewX(20deg);
+  transform: skewX(20deg);
+  display: inline-block;
+}
+
+.formInput {
+  background: #2c2c2c;
+  border: 2px solid var(--main);
+}

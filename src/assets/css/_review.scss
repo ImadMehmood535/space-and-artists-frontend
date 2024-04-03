@@ -1,0 +1,71 @@
+.Rating {
+  position: relative;
+  small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 99;
+  }
+}
+
+.MuiTypography-h6 {
+  width: 100%;
+  margin: 15px 0;
+  font-family: 'Arvo', sans-serif !important;
+  font-size: 1.7rem !important;
+  font-weight: 900 !important;
+  color: #2c2c2c !important;
+}
+
+.RecTextDiv {
+  position: relative;
+  margin: 0 auto;
+  label {
+    display: block;
+    width: 100%;
+    @include Font(1.2, 400, 3);
+  }
+  .pressing {
+    position: relative;
+    margin: 15px 0;
+    span {
+      @include Flex(center, center);
+      display: flex !important;
+      width: 30px;
+      background: nth($color, 5);
+      clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+      &:hover {
+        color: nth($color, 4) !important;
+      }
+    }
+  }
+  h4 {
+    width: 100%;
+    margin: 15px 0;
+    @include Font(1.2, 700, 3);
+    @include Media(991) {
+      font-size: 1rem;
+    }
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid nth($color, 3);
+    resize: none;
+    @include Font(1, 400, 3);
+  }
+  button {
+    display: block;
+    margin: 15px 0 15px auto;
+    padding: 8px 50px;
+    border: 0;
+    background: nth($color, 4);
+    @include Font(1, 400, 1);
+    @include BorRadius(10px);
+  }
+}

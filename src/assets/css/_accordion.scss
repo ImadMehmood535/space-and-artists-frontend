@@ -1,0 +1,26 @@
+.wraper {
+  display: block;
+  width: 100%;
+}
+
+.item {
+  width: 10%;
+  float: left;
+  background-color: nth($color, 3);
+  height: 350px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 200px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s ease;
+  @include Media(575) {
+    height: 250px;
+  }
+}
+
+.test {
+  width: 60%;
+  transition: 0.3s ease 0.3s;
+}

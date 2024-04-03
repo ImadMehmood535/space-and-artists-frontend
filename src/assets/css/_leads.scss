@@ -1,0 +1,595 @@
+/* =============================
+        Leads Section
+============================= */
+.LeadsSec {
+  position: relative;
+  background: nth($color, 3);
+  .LeadsOuterDiv {
+    position: relative;
+    padding: 50px;
+    background: #333333;
+    border: 2px solid #524935;
+    @include Media(575) {
+      padding: 50px 15px;
+    }
+    @include Media(479) {
+      padding: 30px 15px;
+    }
+    .NoYout {
+      min-height: 150px;
+    }
+    .formDiv {
+      position: relative;
+      padding: 25px 0;
+      border-bottom: 1px solid nth($color, 4);
+      margin-bottom: 30px;
+      @include Media(991) {
+        padding: 15px 0;
+      }
+      .form {
+        width: 38%;
+        position: relative;
+        background: linear-gradient(to right, transparent 0%, transparent 20%, #e5e9e8 20%, #e5e9e8 95%, transparent 95%, transparent 100%);
+        // clip-path: polygon(5% 0, 100% 0%, 97% 100%, 0% 100%);
+        @include Media(767) {
+          width: 70%;
+          margin-bottom: 15px;
+        }
+        @include Media(767) {
+          width: 100%;
+        }
+        label {
+          border: 0;
+          padding: 7px 20px;
+          text-transform: uppercase;
+          background: #839aa1;
+          @include Font(0.85, 300, 1);
+          clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+          &.Cursor {
+            cursor: pointer;
+          }
+        }
+        input {
+          width: calc(100% - 150px);
+          border: 0;
+          padding: 5px 10px;
+          text-transform: uppercase;
+          background: nth($color, 5);
+          @include Font(1, 300, 3);
+          @include Media(575) {
+            width: calc(100% - 50px);
+          }
+        }
+        button {
+          border: 0;
+          padding: 5px 15px;
+          text-transform: uppercase;
+          background: nth($color, 4);
+          @include Font(1, 300, 1);
+          clip-path: polygon(25% 0, 100% 0%, 85% 100%, 0% 100%);
+        }
+      }
+      select {
+        width: auto;
+        margin: 0 20px;
+        border: 0;
+        background: #333333;
+        padding: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include Font(1, 700, 4);
+        @include Media(991) {
+          font-size: 1rem;
+          margin: 0 5px;
+        }
+        @include Media(575) {
+          font-size: 0.75rem;
+          margin: 0 5px;
+        }
+        @include Media(479) {
+          width: 100%;
+          margin: 5px 0;
+        }
+        @include Media(1920) {
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .Title {
+      position: relative;
+      margin-bottom: 30px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        right: 0;
+        width: 68%;
+        height: 20px;
+        background: nth($color, 4);
+        clip-path: polygon(0 0, 100% 0%, 95% 100%, 0 100%);
+        @include Media(1366) {
+          width: 72%;
+        }
+        @include Media(1279) {
+          width: 60%;
+          top: 20%;
+          height: 15px;
+        }
+        @include Media(767) {
+          display: none;
+        }
+      }
+      @include Media(479) {
+        margin-bottom: 15px;
+      }
+      h3 {
+        @include Font(1.9, 700, 4);
+        @include Media(991) {
+          font-size: 1.5rem;
+        }
+        @include Media(497) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .LeadsTabUl {
+      position: relative;
+      height: 1200px;
+      overflow-y: scroll;
+      padding-right: 10px;
+      .LeadsTabDiv {
+        display: block;
+        position: relative;
+        margin-bottom: 30px;
+        @include Tran(0.4s, ease-in-out);
+        &.active,
+        &:hover {
+          .Title {
+            background: nth($color, 4);
+            &::before {
+              background: nth($color, 5);
+            }
+          }
+          .Body {
+            &::before {
+              background: nth($color, 1);
+            }
+            .BodyText {
+              h4 {
+                color: nth($color, 3);
+              }
+              p {
+                color: nth($color, 4);
+              }
+            }
+            .ImgDiv {
+              background: nth($color, 4) !important;
+              &::before {
+                background: nth($color, 1) !important;
+              }
+            }
+          }
+        }
+        .Title {
+          position: relative;
+          margin-bottom: 0;
+          padding: 5px 0px 5px 70px;
+          background: nth($color, 5);
+          clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+          @include Tran(0.4s, ease-in-out);
+          @include Media(991) {
+            clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 30px;
+            height: 100%;
+            background: nth($color, 4);
+            clip-path: polygon(40% 0, 100% 0, 60% 100%, 0 100%);
+            @include Tran(0.4s, ease-in-out);
+            @include Media(991) {
+              clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
+            }
+            @include Media(575) {
+              display: block;
+              left: 10px;
+              clip-path: polygon(30% 0, 100% 0, 70% 100%, 0 100%);
+            }
+          }
+          h6 {
+            @include Font(0.85, 400, 3);
+          }
+        }
+        .Body {
+          position: relative;
+          padding: 0 15px;
+          @include Media(991) {
+            padding: 0 30px;
+          }
+          @include Media(479) {
+            padding: 0 10px;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 90%;
+            height: 100%;
+            border: 1px solid nth($color, 4);
+            background: transparent;
+            @include Tran(0.4s, ease-in-out);
+            @include Media(991) {
+              width: 94%;
+              left: 3%;
+            }
+          }
+          .BodyText {
+            width: 70%;
+            position: relative;
+            padding: 10px;
+            h4 {
+              @include Tran(0.4s, ease-in-out);
+              @include Font(1, 700, 4);
+            }
+            hr {
+              @include Tran(0.4s, ease-in-out);
+              border: 1px solid nth($color, 4);
+            }
+            p {
+              @include Tran(0.4s, ease-in-out);
+              @include Font(0.75, 400, 1);
+            }
+          }
+          .BodyImg {
+            width: 30%;
+            position: relative;
+            padding: 10px;
+
+            @include Media(479) {
+              padding: 5px;
+            }
+            .ImgDiv {
+              position: relative;
+              background: nth($color, 1);
+              padding: 5px;
+              clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+              @include Tran(0.4s, ease-in-out);
+              &::before {
+                content: '';
+                position: absolute;
+                top: 1%;
+                left: 1%;
+                width: 98%;
+                height: 98%;
+                background: nth($color, 3);
+                clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+                @include Tran(0.4s, ease-in-out);
+              }
+              img {
+                width: 100%;
+                height: auto;
+                clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .ArtistProArea {
+      position: relative;
+      background: nth($color, 1);
+      @include BorRadius(5px);
+      padding: 15px;
+      .ArtistHomeDiv {
+        img {
+          height: 250px;
+        }
+      }
+      .ArtistInfoDiv {
+        position: relative;
+        margin-bottom: 50px;
+        .ArtistImgDiv {
+          width: 250px;
+          position: relative;
+          z-index: 10;
+          .ImgDiv {
+            position: relative;
+            height: 300px;
+            padding: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            img {
+              @include Img(cover);
+              border-radius: 20px;
+              // clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            }
+          }
+        }
+        .ArtistTextDiv {
+          position: relative;
+          width: calc(100% - 265px);
+          .Title {
+            position: relative;
+            height: auto;
+            z-index: 9;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            &::before {
+              display: none;
+            }
+            h3 {
+              margin-bottom: 10px;
+              @include Font(1.5, 400, 4);
+            }
+            p {
+              @include Font(1, 400, 4);
+            }
+          }
+          .Description {
+            position: relative;
+            h5 {
+              padding-right: 5px;
+              @include Font(1.2, 700, 3);
+              border-right: 1px solid nth($color, 3);
+            }
+            h6 {
+              margin-left: 5px;
+              @include Font(1.2, 700, 4);
+            }
+            strong {
+              display: inline-block;
+              @include Font(0.85, 600, 3);
+              padding-bottom: 15px;
+              margin-bottom: 30px;
+            }
+          }
+          .ReactText {
+            position: relative;
+            margin-top: -20px;
+            padding: 10px 0 10px 30px;
+            background: nth($color, 4);
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            p {
+              text-align: left;
+              padding-left: 60px;
+              @include Font(1, 600, 1);
+            }
+          }
+          .ReactLinkUl {
+            position: relative;
+            align-items: flex-end;
+            justify-content: flex-start;
+            li {
+              position: relative;
+              &:first-child {
+                a {
+                  margin-top: -30px;
+                  width: 80px;
+                  height: 80px;
+                  background: #25d366;
+                  .icon {
+                    font-size: 3rem;
+                  }
+                }
+              }
+            }
+            a {
+              @include Flex(center, center);
+              width: 30px;
+              height: 30px;
+              margin: 0 5px;
+              background: nth($color, 4);
+              @include BorRadius(50%);
+
+              .icon {
+                color: nth($color, 1);
+              }
+            }
+          }
+        }
+      }
+      .ArtistPortDiv {
+        position: relative;
+        height: auto;
+        margin-bottom: 30px;
+        .ArtistVideo {
+          position: relative;
+          iframe {
+            width: 100%;
+            height: 250px;
+          }
+        }
+        .item {
+          height: 250px;
+        }
+        .TitlePort {
+          position: relative;
+          width: 50%;
+          margin-bottom: 15px;
+          padding: 8px 30px 8px 70px;
+        }
+      }
+      .ArtistRec {
+        position: relative;
+        height: auto;
+        border-top: 1px solid nth($color, 4);
+        padding-top: 20px;
+        .RecoTitle {
+          position: relative;
+          .TitlePort {
+            width: 60%;
+            margin-bottom: 15px;
+            padding: 10px 30px 10px 80px;
+          }
+          button {
+            @include Font(1, 400, 1);
+            padding: 5px 30px;
+            border: 0;
+            background: nth($color, 4);
+            @include BorRadius(10px);
+          }
+        }
+        .Description {
+          position: relative;
+          padding: 15px 0;
+          p {
+            @include Font(0.85, 400, 3);
+          }
+        }
+        .RecommendationOuterDiv {
+          position: relative;
+          .RecommendationDiv {
+            position: relative;
+            align-items: flex-start;
+            padding: 15px 30px;
+            background: nth($color, 1);
+            .RecImgDiv {
+              width: 25%;
+              .ImgDiv {
+                position: relative;
+                padding: 10px;
+                height: auto;
+                background: nth($color, 4);
+                clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 1%;
+                  left: 1%;
+                  width: 98%;
+                  height: 98%;
+                  z-index: -1;
+                  background: nth($color, 1);
+                  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+                }
+                img {
+                  width: 100%;
+                  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+                }
+              }
+              .FooterDiv {
+                position: relative;
+                height: auto;
+                margin: -5px 0 0 -15px;
+                padding: 10px 30px;
+                text-align: center;
+                background: nth($color, 5);
+                clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+                p {
+                  text-transform: uppercase;
+                  @include Font(1, 400, 3);
+                }
+              }
+            }
+            .RecTextDiv {
+              width: 72%;
+              .RecUl {
+                position: relative;
+                margin: 15px 0;
+                a {
+                  @include Flex(center, center);
+                  width: 20px;
+                  height: 20px;
+                  background: nth($color, 5);
+                  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+                  .icon {
+                    font-size: 0.75rem;
+                    color: nth($color, 4);
+                  }
+                }
+              }
+              h5 {
+                margin: 15px;
+                @include Font(1, 700, 4);
+              }
+              p {
+                width: 100%;
+                @include Font(0.85, 400, 3);
+              }
+              span {
+                @include Font(1, 400, 4);
+              }
+              textarea {
+                width: 100%;
+                height: 150px;
+                padding: 15px;
+                background: transparent;
+                border: 1px solid nth($color, 4);
+                resize: none;
+                @include Font(1, 400, 4);
+              }
+              button {
+                display: block;
+                margin: 15px 0 15px auto;
+                padding: 8px 50px;
+                border: 0;
+                background: nth($color, 4);
+                @include Font(1, 400, 1);
+                @include BorRadius(10px);
+              }
+            }
+          }
+          .ArtistProfileBtnDiv {
+            position: relative;
+            .ArtistProfileBtn {
+              display: block;
+              padding: 10px 40px 10px 100px;
+              @include Font(1, 400, 1);
+              clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+              background-repeat: no-repeat;
+              background-position: left;
+            }
+          }
+        }
+      }
+    }
+    .DropSearchDiv {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      overflow-y: auto;
+      z-index: 99;
+      background: nth($color, 1);
+      .SearchUl {
+        position: relative;
+        margin-bottom: 0;
+        li {
+          cursor: pointer;
+          @include Font(1, 400, 3);
+          padding: 5px 10px;
+          border-bottom: 1px solid nth($color, 3);
+          @include Media(497) {
+            font-size: 0.75rem;
+          }
+          strong {
+            text-transform: uppercase;
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  .ReactGridGallery_tile {
+    width: 30%;
+  }
+  .NoReview {
+    background: nth($color, 3);
+    height: 100%;
+    h4 {
+      @include Font(1.2, 400, 1);
+    }
+  }
+}

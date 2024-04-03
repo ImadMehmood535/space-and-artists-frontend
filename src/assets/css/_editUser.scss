@@ -1,0 +1,412 @@
+/* =============================
+    Edit User Section
+============================= */
+.MainAdminWrapper {
+  .UserForm {
+    position: relative;
+    h2 {
+      margin-bottom: 15px;
+      @include Font(2, 700, 3);
+    }
+    form {
+      position: relative;
+      label {
+        display: block;
+        margin-bottom: 5px;
+        @include Font(1, 400, 3);
+        @include Media(479) {
+          font-size: 0.85rem;
+        }
+      }
+      input {
+        position: relative;
+        width: 100%;
+        background: transparent;
+        border: 1px solid nth($color, 3);
+        padding: 5px 15px;
+        @include Font(1, 400, 3);
+        @include BorRadius(5px);
+        &::placeholder {
+          color: nth($color, 3);
+        }
+        @include Media(479) {
+          font-size: 0.85rem;
+        }
+      }
+      a {
+        cursor: pointer;
+        margin: 0 5px;
+        @include Font(1, 400, 3);
+        @include Media(479) {
+          font-size: 0.85rem;
+        }
+      }
+      .PhoneInput {
+        padding: 0 15px;
+        border: 1px solid nth($color, 3);
+        @include BorRadius(5px);
+        .PhoneInputCountrySelectArrow,
+        .PhoneInputCountryIcon {
+          color: nth($color, 3);
+        }
+        .PhoneInputInput {
+          border: 0;
+        }
+      }
+      textarea {
+        @extend input;
+        height: 100px;
+      }
+      .CusSelect {
+        @extend input;
+        padding: 8px 15px !important;
+        cursor: pointer;
+      }
+      .CheckPos {
+        position: relative;
+        .MuiFormControl-root {
+          margin: 0 !important;
+        }
+        button {
+          @include Flex(center, center);
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          width: 30px;
+          height: 100%;
+          border: 0;
+          padding: 0;
+          background: nth($color, 3);
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          cursor: pointer;
+          z-index: 0;
+          &:focus {
+            outline: none;
+          }
+          svg {
+            color: nth($color, 1) !important;
+          }
+        }
+        .CheckPassword {
+          @include Flex(center, center);
+          position: absolute;
+          top: 18px;
+          right: -8px;
+          width: 30px;
+          height: 60%;
+          border: 0;
+          background: nth($color, 3);
+          cursor: pointer;
+          z-index: 0;
+          &:focus {
+            outline: none;
+          }
+          .icon {
+            color: nth($color, 1) !important;
+          }
+        }
+      }
+      textarea {
+        @extend input;
+        height: 100px;
+      }
+      .Eye {
+        @include Flex(center, center);
+        position: absolute;
+        top: 0;
+        right: 16px;
+        width: 30px;
+        height: 100%;
+        border: 0;
+        background: nth($color, 3);
+        cursor: pointer;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        &:focus {
+          outline: none;
+        }
+        .icon {
+          color: nth($color, 1) !important;
+        }
+      }
+      .Role {
+        position: relative;
+        p {
+          @include Font(1, 400, 3);
+          @include Media(479) {
+            font-size: 0.85rem;
+          }
+        }
+        input {
+          width: auto;
+          margin-left: 15px;
+        }
+        label {
+          cursor: pointer;
+          margin: 0 5px;
+          @include Font(1, 400, 4);
+          @include Media(479) {
+            font-size: 0.85rem;
+          }
+        }
+      }
+      .Overlay {
+        position: relative;
+        background: transparent;
+        border: 1px solid nth($color, 3);
+        @include Font(1, 400, 3);
+        @include BorRadius(5px);
+        @include Media(479) {
+          font-size: 0.85rem;
+        }
+        span {
+          width: calc(100% - 150px);
+          overflow: hidden;
+          text-align: left;
+          padding: 3px 12px;
+        }
+        button {
+          border: 0;
+          padding: 5px 30px;
+          @include Font(1, 400, 1);
+          background: nth($color, 3);
+          @include Media(479) {
+            padding: 5px 20px;
+            font-size: 0.85rem;
+          }
+        }
+      }
+      .SubmitBtn {
+        border: 0;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        background: nth($color, 4);
+        @include Font(1, 300, 1);
+        clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+        @include Media(575) {
+          padding: 8px 30px;
+          font-size: 0.85rem;
+        }
+      }
+    }
+    .PhoneInput {
+      padding: 20px 15px 0;
+      border-bottom: 1px solid nth($color, 3);
+      .PhoneInputCountrySelectArrow,
+      .PhoneInputCountryIcon {
+        color: nth($color, 3);
+      }
+      .PhoneInputInput {
+        position: relative;
+        width: 100%;
+        background: transparent;
+        border: 0;
+        padding: 5px 15px;
+        @include Font(1, 400, 3);
+        &::placeholder {
+          color: nth($color, 3);
+        }
+        @include Media(479) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .UserTableDiv {
+    h2 {
+      margin-bottom: 15px;
+      @include Font(2, 700, 3);
+    }
+    .AddBtn {
+      border: 0;
+      padding: 10px 50px;
+      margin: 15px 0;
+      text-transform: uppercase;
+      background: nth($color, 4);
+      @include Font(1, 300, 1);
+      margin-left: auto;
+      clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+      @include Media(575) {
+        padding: 8px 30px;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .table {
+    .icon,
+    th,
+    td {
+      @include Media(575) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .UploadedForm {
+    position: relative;
+    label {
+      display: block;
+      margin-bottom: 15px;
+      @include Font(1, 600, 3);
+    }
+    .Overlay {
+      width: 500px;
+      position: relative;
+      background: transparent;
+      border: 1px solid nth($color, 3);
+      @include Font(1, 400, 3);
+      @include BorRadius(5px);
+      @include Media(767) {
+        width: 100%;
+      }
+      @include Media(479) {
+        font-size: 0.85rem;
+      }
+      span {
+        width: calc(100% - 150px);
+        overflow: hidden;
+        text-align: left;
+        padding: 3px 12px;
+      }
+      button {
+        border: 0;
+        padding: 5px 30px;
+        @include Font(1, 400, 1);
+        background: nth($color, 3);
+        @include Media(479) {
+          padding: 5px 20px;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .UploadedImg {
+    position: relative;
+    width: 300px;
+    margin: 30px auto 10px;
+  }
+
+  .DelModalModal {
+    .modal-header {
+      padding: 15px 15px 10px !important;
+      border-color: nth($color, 4);
+      h5 {
+        margin-bottom: 0;
+        @include Font(1.5, 400, 4);
+      }
+    }
+    .DelModalText {
+      position: relative;
+      padding: 15px;
+      p {
+        margin-bottom: 15px;
+        @include Font(1, 400, 3);
+      }
+      button {
+        text-transform: uppercase;
+        @include Font(1, 400, 4);
+        padding: 10px 45px;
+        border: 1px solid nth($color, 4);
+        margin: 5px;
+        &:hover {
+          color: nth($color, 1);
+          background: nth($color, 4);
+        }
+        &.DelBtn {
+          color: nth($color, 1);
+          background: #f5364a;
+          border: 1px solid #f5364a;
+        }
+      }
+    }
+  }
+
+  span.MuiTypography-root,
+  .MuiFormLabel-root.Mui-focused,
+  .MuiFormLabel-root,
+  .PrivateRadioButtonIcon-root-5.PrivateRadioButtonIcon-checked-7,
+  .MuiIconButton-label svg {
+    color: nth($color, 3) !important;
+  }
+
+  .CropModal {
+    h5 {
+      margin-bottom: 0;
+      @include Font(1.5, 700, 4);
+    }
+    .CroppedDiv {
+      position: relative;
+      padding: 25px;
+      background: nth($color, 3);
+      .ReactCrop__image {
+        width: auto;
+        height: 300px;
+      }
+      button {
+        border: 0;
+        display: block;
+        margin: 15px 0;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        background: nth($color, 4);
+        @include Font(1, 300, 1);
+        clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+        @include Media(575) {
+          padding: 8px 30px;
+          font-size: 0.85rem;
+        }
+      }
+      input {
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+        background: nth($color, 3);
+        border: 1px solid nth($color, 4);
+        padding: 5px 15px;
+        @include Font(1, 400, 1);
+        @include BorRadius(5px);
+        &::placeholder {
+          color: nth($color, 1);
+        }
+        @include Media(479) {
+          font-size: 0.85rem;
+        }
+      }
+      .PreviewImg {
+        position: relative;
+        h4 {
+          margin-bottom: 15px;
+          @include Font(1.5, 400, 4);
+        }
+      }
+    }
+  }
+
+  .ReactGridGallery_tile-icon-bar {
+    display: none;
+  }
+
+  .ReactGridGallery_tile {
+    width: 30%;
+  }
+
+  .image_1swebtw-o_O-imageLoaded_zgbg08 {
+    width: 500px;
+    @include Media(575) {
+      width: auto;
+    }
+  }
+
+  .EditProfileModal {
+    height: 100vh;
+    margin: auto;
+    overflow-y: scroll;
+    padding: 0 15px;
+  }
+}

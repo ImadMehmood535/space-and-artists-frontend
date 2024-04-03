@@ -1,0 +1,97 @@
+/* =============================
+        Header Section
+============================= */
+.navBg {
+  background-color: nth($color, 3);
+  max-width: 196px;
+  min-height: 100vh;
+  height: auto;
+  nav {
+    padding-top: 15px;
+    h1 {
+      width: 100%;
+      text-align: center;
+      @include Font(1.5, 700, 3);
+      border-bottom: 1px solid nth($color, 1);
+      padding: 15px 10px;
+      background-color: nth($color, 4);
+    }
+    a {
+      width: 100%;
+      padding: 10px;
+      color: nth($color, 1);
+      border-bottom: 1px solid nth($color, 1);
+      font-weight: 300;
+      @include Media(575) {
+        padding: 10px 5px;
+      }
+      &.active,
+      &:hover {
+        background-color: nth($color, 4);
+        color: nth($color, 1);
+        i {
+          color: nth($color, 1);
+        }
+      }
+    }
+    i {
+      padding-right: 10px;
+    }
+    small {
+      color: nth($color, 1);
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  nav {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 576px) {
+  .navBg {
+    max-width: 8.333333%;
+    nav {
+      padding-top: 0px;
+      h1 {
+        display: none;
+      }
+      a {
+        text-align: center;
+      }
+      i {
+        padding-right: 0px;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-height: 600px) {
+  .navBg {
+    height: 100%;
+    nav {
+      padding-top: 0px;
+    }
+  }
+}
+
+.page-link {
+  background: nth($color, 3);
+  color: nth($color, 1);
+  &.disabled {
+    opacity: 0.5;
+  }
+  &:hover {
+    color: nth($color, 1);
+    background: nth($color, 4);
+  }
+}
+
+.table {
+  .icon {
+    color: nth($color, 1);
+  }
+}

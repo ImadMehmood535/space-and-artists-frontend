@@ -1,0 +1,74 @@
+/* =============================
+    Login Section
+============================= */
+.LoginWrapper {
+  position: relative;
+  background: nth($color, 3);
+  .LogoDiv {
+    position: relative;
+    width: 500px;
+    margin-bottom: 50px;
+    @include Media(575) {
+      width: 80%;
+    }
+    p {
+      text-transform: uppercase;
+      margin: 15px 0;
+      letter-spacing: 1px;
+      @include Font(2, 700, 4);
+    }
+  }
+  .MuiFormControl-root {
+    border: 1px solid nth($color, 1);
+    @include BorRadius(5px);
+    padding: 5px;
+    .MuiInputLabel-formControl {
+      top: 5px;
+      left: 10px;
+    }
+    .MuiIconButton-label svg,
+    .MuiInputLabel-formControl {
+      color: nth($color, 1) !important;
+    }
+  }
+  .LoginDiv {
+    padding: 100px 15px;
+    height: 100%;
+  }
+  .SubmitBtn {
+    border: 0;
+    display: block;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    background: nth($color, 4);
+    @include Font(1, 300, 1);
+    clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
+    @include Media(575) {
+      padding: 8px 30px;
+      font-size: 0.85rem;
+    }
+  }
+}
+.MainAdminWrapper {
+  padding: 0 15px;
+}
+
+.AdminModal,
+.MainAdminWrapper {
+  .MuiInputBase-input {
+    color: nth($color, 3) !important;
+  }
+  .MuiFormControl-root {
+    border: 1px solid nth($color, 3);
+    @include BorRadius(5px);
+    padding: 5px;
+    .MuiInputLabel-formControl {
+      top: 5px;
+      left: 10px;
+    }
+    .MuiIconButton-label svg,
+    .MuiInputLabel-formControl {
+      color: nth($color, 3) !important;
+    }
+  }
+}
