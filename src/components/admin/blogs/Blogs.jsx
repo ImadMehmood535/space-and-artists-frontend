@@ -29,7 +29,7 @@ const Blogs = () => {
       .catch((err) => {
         console.error(err.response);
         setIsLoading(false);
-        notificationError("Blog", "Something went wrong please try again!");
+        // notificationError("Blog", "Something went wrong please try again!");
       });
   };
   useEffect(getBlogs, []);

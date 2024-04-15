@@ -90,7 +90,7 @@ const UsersTable = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `users/pagination?limit=${limit}&page=${page}`,
+        `users-all/pagination?limit=${limit}&page=${page}`,
         { headers: headers.simple }
       );
       if (res.status === 200) {
